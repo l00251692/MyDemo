@@ -1,24 +1,23 @@
 /* pages/mine/mine.wxss */
 
 .header {
-    padding: 15px 0;
     text-align: center;
-    background-color: #696969;
     color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.onlogin{
-  background-color: #696969;
+.background{
+  width: 100%;
 }
 
 .userbutton{
-  display: inline-block;
-  background-color: #696969;
-  width: 170rpx;
-  height: 170rpx;
-  border-radius: 50%;
-  padding-left:0;
-  padding-top:0;
+  position: absolute;
+  top: 100rpx;
+  display: flex;
+  flex-direction: column;
 }
 
 .avatar {
@@ -29,49 +28,109 @@
     border: 5rpx solid rgba(255, 255, 255, 0.6);
 }
 
-.weui-btn_plain {
+.name{
+  color: #fff;
+  position: absolute;
+  top: 280rpx;
+}
+
+.info{
+  width: 100%;
   background-color: #fff;
 }
 
-.zan-badge {
+.item{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+}
+
+.item image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.item text{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  opacity: 0.6;
+  padding-left: 20rpx;
+}
+
+.instruction{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.instruction text{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  opacity: 0.6;
+}
+
+.service{
+  width: 100%;
+  height: 200rpx;
   position: relative;
 }
-.zan-badge__count {
+
+.service image{
+  width: 100%;
+  height: 200rpx;
+}
+
+.phone{
+  border-radius: 4rpx;
+  z-index: 20;
   position: absolute;
-  top: 1rpx;
-  left: 6em;
-  height: 1.6em;
-  min-width: 1.6em;
-  line-height: 1.6;
-  padding: 0 .4em;
-  font-size: 10px;
-  font-family: tahoma;
-  border-radius: .8em;
-  background: #FF4444;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  transform: translateX(50%);
-  transform-origin: -10% center;
-  z-index: 10;
-  box-shadow: 0 0 0 1px #fff;
-  box-sizing: border-box;
-}
-
-.cs_button {
-  background-color: #fff;
-  border: 0px;
-  position: fixed;
-  right:12rpx;
-  margin-bottom:12rpx;
-  margin-top:12rpx;
-}
-
-.cs_button:after {
-  border: 0px;
-}
-
-.cs_image {
-  width: 60rpx;
+  background-color: #cd543c;
+  text-align:center;
+  top:50rpx;
+  left: 60rpx;
+  width: 300rpx;
   height: 60rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.phone text{
+  color: #fff;
+}
+
+.concat{
+  border-radius: 4rpx;
+  z-index: 20;
+  position: absolute;
+  background-color: #028760;
+  text-align:center;
+  top:50rpx;
+  left: 390rpx;
+  width: 300rpx;
+  height: 60rpx;
+}
+
+.concat button{
+  border: none;
+  background-color:  #028760;
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.concat button::after{
+  border: none;
+}
+
+.copyright{
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 10rpx;
+  text-align: center;
+  width: 100%;
 }

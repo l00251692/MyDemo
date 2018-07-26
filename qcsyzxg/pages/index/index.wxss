@@ -73,7 +73,7 @@ swiper-item image {
   border-radius: 10rpx;
   z-index: 20;
   position: absolute;
-  background-color: #7bcfa6;
+  background-color: #2d80ff;
   text-align:center;
   top:10rpx;
   left: 20rpx;
@@ -91,7 +91,7 @@ swiper-item image {
   border-radius: 10rpx;
   z-index: 20;
   position: absolute;
-  background-color: #7bcfa6;
+  background-color: #2d80ff;
   text-align:center;
   top:10rpx;
   left: 10rpx;

@@ -58,6 +58,11 @@ Page({
       })
     }
   },
+
+  onPhoneTap(e) {
+    makePhoneCall('18261149716')
+  },
+  
   onShareAppMessage() {
     return {
       title: '南京青春盛焰照相馆',
