@@ -3,17 +3,17 @@
 .header {
     padding: 15px 0;
     text-align: center;
-    background-color: #d3b5ab;
+    background-color: #696969;
     color: #fff;
 }
 
 .onlogin{
-  background-color: #d3b5ab;
+  background-color: #696969;
 }
 
 .userbutton{
   display: inline-block;
-  background-color: #d3b5ab;
+  background-color: #696969;
   width: 170rpx;
   height: 170rpx;
   border-radius: 50%;

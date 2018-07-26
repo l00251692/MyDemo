@@ -1,65 +1,67 @@
-//index.js
-var goodsData = require('../../utils/goodsData.js');
-//获取应用实例
-var app = getApp()
+
+const windowWidth = wx.getSystemInfoSync().windowWidth;
+
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    carousel:{},
-    navs:{},
-    zhengjian: [
-      {
-        "goods_id": 1,
-        "goods_name": "简历正装照",
-        "goods_price": "28.9起",
-        "thumbnail": "/images/category/goods1.jpg",
-      }]
-    ,
-    sheying: [{
-      "goods_id": 2,
-      "goods_name": "个人写真",
-      "goods_price": "28.9起",
-      "thumbnail": "/images/category/goods2.jpg",
-    },
-      {
-        "goods_id": 3,
-        "goods_name": "团体摄影",
-        "goods_price": "28.9起",
-        "thumbnail": "/images/category/goods3.jpg",
-      },
-      {
-        "goods_id": 4,
-        "goods_name": "会议摄像",
-        "goods_price": "28.9起",
-        "thumbnail": "/images/category/goods4.jpg",
-      }],
-    zulin: [{
-      "goods_id": 5,
-      "goods_name": "正装租赁",
-      "goods_price": "20.0起",
-      "thumbnail": "/images/category/goods5.jpg",
-    },
-      {
-        "goods_id": 6,
-        "goods_name": "演出服装租赁",
-        "goods_price": "100.0起",
-        "thumbnail": "/images/category/goods6.jpg",
-      }]
-  },
-  onLoad: function () {
-    var that = this
-    //调用应用实例的方法获取全局数据
-  
-    that.setData({
-      carousel: goodsData.carousel,
-      newGoods: goodsData.newGoods(),
-      hotGoods: goodsData.hotGoods(),
-    })
+    activeTab: 0, //选中tab下标
+    tabTitles: ["婚纱摄影", "艺术写真", "团体摄影", "服装租赁", "艺术写真", "团体摄影"]
   },
 
-  onShareAppMessage() {
-    return {
-      title: '南京青春盛焰照相馆',
-      path: '/pages/category/category'
+  onLoad(options){
+    this.id = options.id
+  },
+
+  /**
+   * 点击tab
+  */
+  selectTab: function (e) {
+    console.log(e);
+    //设置选中样式
+    let toIndex = e.currentTarget.dataset.index;
+    let fromIndex = this.data.activeTab;
+    if (toIndex === fromIndex) {
+      return;
     }
+    let offSetLeft = e.currentTarget.offsetLeft;
+    this.scrollTopBar(offSetLeft, toIndex);
+
+    this.setData({
+      activeTab: toIndex
+    });
+  },
+
+  /**
+   * 自适应tabBar选中位置
+   */
+  scrollTopBar: function (offSetLeft, index) {
+    let that = this;
+    var nodeId = "#item-" + index;
+    wx.createSelectorQuery().select(nodeId).boundingClientRect(function (rect) {
+      var res = wx.getSystemInfoSync();
+      let targetOffSetLeft = offSetLeft - (res.windowWidth / 2) + (rect.width / 2);
+      that.setData({
+        scrollLeft: targetOffSetLeft
+      });
+    }).exec();
+  },
+
+  GetCurrentTab: function (e) {
+    var that = this;
+    let endIndex = e.detail.current;
+    wx.createSelectorQuery().selectAll('.scroll-header-item-wraper').boundingClientRect(function (rects) {
+      var offsetLeft = 0;
+      for (var i = 0; i < endIndex; i++) {
+        offsetLeft += rects[i].width;
+      }
+      that.scrollTopBar(offsetLeft, endIndex);
+    }).exec();
+    
+    this.setData({
+      activeTab: e.detail.current
+    });
   }
 })
