@@ -1,5 +1,7 @@
 import {  makePhoneCall } from '../../utils/util'
 
+const app = getApp()
+
 Page({
   data: {
     imgUrls: [
@@ -15,6 +17,20 @@ Page({
 
   onPhoneTap(e) {
     makePhoneCall('18261149716')
+  },
+
+  onItem1(e){
+    app.globalData.curIndex = 0;
+    wx.switchTab({
+      url: '/pages/category/category',
+    })
+  },
+
+  onItem2(e) {
+    app.globalData.curIndex = 1;
+    wx.switchTab({
+      url: '/pages/category/category',
+    })
   },
 
   onShareAppMessage() {

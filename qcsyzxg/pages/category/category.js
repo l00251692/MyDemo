@@ -1,6 +1,8 @@
 
 const windowWidth = wx.getSystemInfoSync().windowWidth;
 
+const app = getApp()
+
 Page({
 
   /**
@@ -8,11 +10,13 @@ Page({
    */
   data: {
     activeTab: 0, //选中tab下标
-    tabTitles: ["婚纱摄影", "艺术写真", "团体摄影", "服装租赁", "艺术写真", "团体摄影"]
+    tabTitles: ["婚纱摄影", "艺术写真", "团体摄影", "服装租赁"]
   },
 
   onLoad(options){
-    this.id = options.id
+    this.setData({
+      activeTab: app.globalData.curIndex
+    })
   },
 
   /**
@@ -32,6 +36,8 @@ Page({
     this.setData({
       activeTab: toIndex
     });
+
+    app.globalData.curIndex = toIndex;
   },
 
   /**
@@ -49,9 +55,12 @@ Page({
     }).exec();
   },
 
-  GetCurrentTab: function (e) {
+  swiperChange: function (e) {
+    console.log("swiperChange")
     var that = this;
     let endIndex = e.detail.current;
+    app.globalData.curIndex = endIndex;
+
     wx.createSelectorQuery().selectAll('.scroll-header-item-wraper').boundingClientRect(function (rects) {
       var offsetLeft = 0;
       for (var i = 0; i < endIndex; i++) {

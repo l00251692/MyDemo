@@ -23,7 +23,7 @@ swiper-item image {
 
 .titel_text{
   font-size: 34rpx;
-  color: #7bcfa6;
+  color: #2d80ff;
   opacity:0.8;
 }
 

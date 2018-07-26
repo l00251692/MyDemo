@@ -203,10 +203,6 @@ App({
   },
 
   globalData: {
-    loginInfo:{
-      is_login: 0,
-      userInfo:null
-    },
-    currentAddress: null
+    curIndex: 0
   }
 })

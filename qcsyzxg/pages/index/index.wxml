@@ -14,39 +14,31 @@
     </view>
     <view class="content">
       <view class="select-top">
-        <view class="select-top-small-left">
-          <navigator url="/pages/subject/subject1">
-            <image src="/images/index/s1.png" class='item_image'></image>
-            <view class="item_title-left">
-              <text>婚纱摄影</text>
-            </view>
-          </navigator>
+        <view class="select-top-small-left" bindtap='onItem1'>
+          <image src="/images/index/s1.png" class='item_image'></image>
+          <view class="item_title-left">
+            <text>婚纱摄影</text>
+          </view>
         </view>
-        <view class="select-top-small-right">
-          <navigator url="/pages/subject/subject2">
-            <image src="/images/index/s2.png" class="item_image"></image>
-            <view class="item_title-right">
-              <text>艺术写真</text>
-            </view>
-          </navigator>
+        <view class="select-top-small-right" bindtap='onItem2'>
+          <image src="/images/index/s2.png" class="item_image"></image>
+          <view class="item_title-right">
+            <text>艺术写真</text>
+          </view>
         </view>
       </view>
       <view class="select-top">
-        <view class="select-top-small-left">
-          <navigator url="/pages/subject/subject1">
-            <image src="/images/index/s3.png" class='item_image'></image>
-            <view class="item_title-left">
-              <text>团体摄影</text>
-            </view>
-          </navigator>
+        <view class="select-top-small-left" bindtap='onItem3'>
+          <image src="/images/index/s3.png" class='item_image'></image>
+          <view class="item_title-left">
+            <text>团体摄影</text>
+          </view>
         </view>
-        <view class="select-top-small-right">
-          <navigator url="/pages/subject/subject2">
-            <image src="/images/index/s4.png"  class="item_image"></image>
-            <view class="item_title-right">
-              <text>服装租赁</text>
-            </view>
-          </navigator>
+        <view class="select-top-small-right" bindtap='onItem4'>
+          <image src="/images/index/s4.png" class="item_image"></image>
+          <view class="item_title-right">
+            <text>服装租赁</text>
+          </view>
         </view>
       </view>
     </view>
@@ -55,14 +47,15 @@
 
   <view class="service">
     <image src="/images/index/service.png"></image>
-    <view class='phone' bindtap="onPhoneTap"> 
+    <view class='phone' bindtap="onPhoneTap">
       <text>电话咨询</text>
     </view>
 
     <view class='concat'>
-    <button class="cs_button" open-type="contact">
-     <text>微信咨询</text>
-    </button></view>
+      <button class="cs_button" open-type="contact">
+        <text>微信咨询</text>
+      </button>
+    </view>
 
     <view class='copyright'>
       <text>Copyright © 南京青春盛焰 All Rights Reserved</text>

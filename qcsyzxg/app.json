@@ -1,11 +1,8 @@
-{
+ {
   "pages":[ 
     "pages/index/index",
-    "pages/subject/subject1",
-    "pages/subject/subject2",
-    "pages/subject/subject3",
-    "pages/details/details",
     "pages/category/category",
+    "pages/detail/detail",
     "pages/mine/mine",
     "pages/logs/logs"
   ],

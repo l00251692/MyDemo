@@ -1,12 +1,127 @@
-<view class="swiper-tab" >  
-    <scroll-view class='scroll-view-header' scroll-with-animation="true" scroll-x="true" scroll-left="{{scrollLeft}}">
+<view class="swiper-tab">
+  <scroll-view class='scroll-view-header' scroll-with-animation="true" scroll-x="true" scroll-left="{{scrollLeft}}">
     <view class="scroll-header-item-wraper {{activeTab==index?'title-selected':''}}" wx:for="{{tabTitles}}" bindtap='selectTab' wx:key="unqiue" data-index="{{index}}" id="item-{{index}}">
       <text class="header-item-title">{{item}}</text>
     </view>
   </scroll-view>
-</view>  
-<swiper class="swiper-box" current="{{activeTab}}" duration="300" style="height:400px" bindchange="GetCurrentTab" data-current='6' >  
-    <swiper-item wx:for="{{tabTitles}}" wx:key="item.index">  
-      <view>{{item}}</view>
-    </swiper-item>  
-</swiper>  
+</view>
+
+<swiper class="swiper-box" current="{{activeTab}}" autoplay="{{false}}" bindchange="swiperChange" >
+  <swiper-item class="swiper-item">
+    <scroll-view enable-back-to-top="true" scroll-y="true" class='scroll-view-item'>
+      <navigator class='list-item' url="/pages/detail/detail?cat=1&sub=1&title=NO 101">
+        <image class="list-item-image" src="/images/category/cat1_1.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 101</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=1&sub=2&title=NO 102">
+        <image class="list-item-image" src="/images/category/cat1_2.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 102</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=1&sub=3&title=NO 103">
+        <image class="list-item-image" src="/images/category/cat1_3.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 103</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=1&sub=4&title=NO 104">
+        <image class="list-item-image" src="/images/category/cat1_4.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 104</text>
+        </view>
+      </navigator>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class="swiper-item">
+    <scroll-view enable-back-to-top="true" scroll-y="true" class='scroll-view-item'>
+      <navigator class='list-item' url="/pages/detail/detail?cat=2&sub=1&title=NO 201">
+        <image class="list-item-image" src="/images/category/cat2_1.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 201</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=2&sub=2&title=NO 202">
+        <image class="list-item-image" src="/images/category/cat2_2.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 202</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=2&sub=3&title=NO 203">
+        <image class="list-item-image" src="/images/category/cat2_3.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 203</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=2&sub=4&title=NO 204">
+        <image class="list-item-image" src="/images/category/cat2_4.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 204</text>
+        </view>
+      </navigator>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class="swiper-item">
+    <scroll-view enable-back-to-top="true" scroll-y="true" class='scroll-view-item'>
+      <navigator class='list-item' url="/pages/detail/detail?cat=3&sub=1&title=NO 301">
+        <image class="list-item-image" src="/images/category/cat3_1.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 301</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=3&sub=2&title=NO 302">
+        <image class="list-item-image" src="/images/category/cat3_2.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 302</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=3&sub=3&title=NO 303">
+        <image class="list-item-image" src="/images/category/cat3_3.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 303</text>
+        </view>
+      </navigator>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class="swiper-item">
+    <scroll-view enable-back-to-top="true" scroll-y="true" class='scroll-view-item'>
+      <navigator class='list-item' url="/pages/detail/detail?cat=4&sub=1&title=NO 401">
+        <image class="list-item-image" src="/images/category/cat4_1.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 401</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=2&sub=4&title=NO 402">
+        <image class="list-item-image" src="/images/category/cat4_2.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 402</text>
+        </view>
+      </navigator>
+
+      <navigator class='list-item' url="/pages/detail/detail?cat=4&sub=3&title=NO 403">
+        <image class="list-item-image" src="/images/category/cat4_3.jpg" mode='widthFix'></image>
+        <view class='list-item-info'>
+          <text class="list-item-text">NO 403</text>
+        </view>
+      </navigator>
+
+    </scroll-view>
+  </swiper-item>
+</swiper>
