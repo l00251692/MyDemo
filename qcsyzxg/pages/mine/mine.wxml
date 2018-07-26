@@ -1,0 +1,43 @@
+
+<!--pages/mine/mine.wxml-->
+<view class="header">
+  <view class="onlogin">
+    <view class="userbutton">
+      <image class="avatar" src="/images/logo.png"></image>
+    </view>
+    
+  </view>
+  <view>
+    南京青春盛焰照相馆
+  </view>
+</view>
+<view class="weui-cells">
+  <view  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd"> 营业时间</view>
+    <view class="weui-cell__ft ">周一至周日</view>
+  </view>
+  <view  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd"> 地址 </view>
+    <view class="weui-cell__ft ">南京市玄武区锁金5村16号18栋</view>
+  </view>
+  <view  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd"> QQ </view>
+    <view class="weui-cell__ft ">232324234</view>
+  </view>
+  <view  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd"> 邮箱</view>
+    <view class="weui-cell__ft ">232324234@qq.com</view>
+  </view>
+</view>
+<view   class="weui-cells">
+  <view data-phone="18261149716" bindtap="onPhoneTap" class="weui-cell weui-cell_access">
+    <view class="weui-cell__bd">联系电话</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">18261149716</view>
+  </view>
+  <view class="weui-cell weui-cell_access">
+    <view class="weui-cell__bd">客服留言</view>
+    <button class="cs_button" open-type="contact">
+      <image class="cs_image" src="/images/concat.png"></image>
+    </button>   
+  </view> 
+</view>

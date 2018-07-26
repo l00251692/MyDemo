@@ -1,0 +1,23 @@
+<view class="trip">
+  <view class="trip-top" wx:if="{{ trip != null }}">
+    <view class="trip-info">
+      <view class="h1">校园写真系列</view>
+    </view>
+  </view>
+  <view class="trip-wps">
+    <view class="day">
+      <view class="wp-sep clear-both"></view>
+      <view class="day-content">
+        <block wx:for="{{ imgList }}" wx:for-item="item" wx:key="item.id">
+          <view class="waypoint">
+            <view class="photo-ctn">
+              <image style="width: 100%; mode:aspectFit; background-color: #eeeeee;" class="cover" src="{{ item.img }}"></image>
+            </view>
+            <view wx:if="{{ item.title }}" class="text">{{ item.title }}</view>
+          </view>
+          <view class="wp-sep"></view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

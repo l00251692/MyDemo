@@ -1,0 +1,42 @@
+{
+  "pages":[ 
+    "pages/index/index",
+    "pages/subject/subject1",
+    "pages/subject/subject2",
+    "pages/subject/subject3",
+    "pages/details/details",
+    "pages/category/category",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundColor": "#d3b5ab",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d3b5ab",
+    "navigationBarTitleText": "青春盛焰照相馆",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar": {
+    "selectedColor": "#d3b5ab",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabBar/Tabbar_Home_Empty.png",
+        "selectedIconPath": "images/tabBar/Tabbar_Home_Full.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/tabBar/Tabbar_Msg_Empty.png",
+        "selectedIconPath": "images/tabBar/Tabbar_Msg_Full.png",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/tabBar/Tabbar_My_Empty.png",
+        "selectedIconPath": "images/tabBar/Tabbar_My_Full.png",
+        "text": "联系方式"
+      }
+    ]
+  }
+}
