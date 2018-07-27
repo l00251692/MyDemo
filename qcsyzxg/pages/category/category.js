@@ -13,10 +13,14 @@ Page({
     tabTitles: ["婚纱摄影", "艺术写真", "团体摄影", "服装租赁"]
   },
 
-  onLoad(options){
+  onShow(){
     this.setData({
       activeTab: app.globalData.curIndex
     })
+  },
+
+  onLoad(options){
+    
   },
 
   /**

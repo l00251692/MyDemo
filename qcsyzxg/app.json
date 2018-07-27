@@ -26,7 +26,7 @@
         "pagePath": "pages/category/category",
         "iconPath": "images/tabBar/Tabbar_Msg_Empty.png",
         "selectedIconPath": "images/tabBar/Tabbar_Msg_Full.png",
-        "text": "服务"
+        "text": "客照欣赏"
       },
       {
         "pagePath": "pages/mine/mine",

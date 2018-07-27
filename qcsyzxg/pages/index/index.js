@@ -5,9 +5,9 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      '/images/index/b1.jpg',
-      '/images/index/b2.jpg',
-      '/images/index/b3.jpg'
+      '/images/index/b1.png',
+      '/images/index/b2.png',
+      '/images/index/b3.png'
     ],
     indicatorDots: false,
     autoplay: false,
@@ -28,6 +28,20 @@ Page({
 
   onItem2(e) {
     app.globalData.curIndex = 1;
+    wx.switchTab({
+      url: '/pages/category/category',
+    })
+  },
+
+  onItem3(e) {
+    app.globalData.curIndex = 2;
+    wx.switchTab({
+      url: '/pages/category/category',
+    })
+  },
+
+  onItem4(e) {
+    app.globalData.curIndex = 3;
     wx.switchTab({
       url: '/pages/category/category',
     })

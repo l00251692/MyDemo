@@ -41,6 +41,17 @@ Page({
     makePhoneCall(e.currentTarget.dataset.phone)
   },
 
+  onAddrTap(e){
+    console.log("onAddrTap")
+    wx.openLocation({
+      latitude: 32.075900,
+      longitude: 118.818120,
+      scale: 18,
+      name: '青春盛焰照相馆',
+      address: '江苏省南京市玄武区锁金五村16号林业化学研究所18栋负1楼'
+    })
+  },
+
   callback() {
     this.onLogin()
   },
