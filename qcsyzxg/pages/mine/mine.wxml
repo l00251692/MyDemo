@@ -14,11 +14,11 @@
     <text>南京市玄武区南京林业大学内</text>
   </view>
   <view class='item'>
-    <image src="/images/mine/addr.png" class='address'></image>
+    <image src="/images/mine/clock.png" class='address'></image>
     <text>9:00-21:00</text>
   </view>
   <view class='item' bindlongtap='onPhoneTap'>
-    <image src="/images/mine/addr.png" class='address'></image>
+    <image src="/images/mine/phone.png" class='address'></image>
     <text>18261149716[点击拨号]</text>
   </view>
 </view>
